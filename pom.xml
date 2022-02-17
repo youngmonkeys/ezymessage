@@ -6,37 +6,41 @@
         <groupId>com.tvd12</groupId>
         <artifactId>ezyfox</artifactId>
         <version>0.0.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.ezy</groupId>
     <artifactId>database-setting</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>database-setting</name>
     <description>database project for Ezy Server</description>
     <properties>
         <java.version>11</java.version>
         <hikaricp.version>4.0.3</hikaricp.version>
+        <ezy.mongo.version>1.2.1</ezy.mongo.version>
+        <ezy.autoconfig.version>1.0.2</ezy.autoconfig.version>
+        <ezy.http.server.version>0.1.9</ezy.http.server.version>
+        <ezy.http.client.version>0.1.9</ezy.http.client.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezydata-mongodb</artifactId>
-            <version>1.2.1</version>
+            <version>${ezy.mongo.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyfox-boot-autoconfigure</artifactId>
-            <version>1.0.2</version>
+            <version>${ezy.autoconfig.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyhttp-server-boot</artifactId>
-            <version>0.1.9</version>
+            <version>${ezy.http.server.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyhttp-client</artifactId>
-            <version>0.1.9</version>
+            <version>${ezy.http.client.version}</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
