@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tvd12</groupId>
+        <artifactId>ezyfox</artifactId>
+        <version>0.0.2</version>
+        <relativePath/>
+    </parent>
+    <groupId>org.youngmonkeys</groupId>
+    <artifactId>message-box</artifactId>
+    <version>0.0.1</version>
+    <name>message-box</name>
+    <description>Admin for MessageBox</description>
+    <properties>
+        <hikaricp.version>4.0.3</hikaricp.version>
+        <ezy.version>1.2.1</ezy.version>
+        <ezy.autoconfig.version>1.0.2</ezy.autoconfig.version>
+        <ezy.http.version>0.2.2</ezy.http.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezydata-mongodb</artifactId>
+            <version>${ezy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezyfox-boot-autoconfigure</artifactId>
+            <version>${ezy.autoconfig.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezyhttp-server-boot</artifactId>
+            <version>${ezy.http.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezyhttp-client</artifactId>
+            <version>${ezy.http.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikaricp.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
