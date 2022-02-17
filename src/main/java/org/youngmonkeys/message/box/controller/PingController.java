@@ -1,4 +1,4 @@
-package com.ezy.databasesetting.controller;
+package org.youngmonkeys.message.box.controller;
 
 import com.tvd12.ezyhttp.server.core.annotation.Controller;
 import com.tvd12.ezyhttp.server.core.annotation.DoGet;

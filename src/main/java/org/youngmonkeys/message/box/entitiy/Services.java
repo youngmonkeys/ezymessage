@@ -1,4 +1,4 @@
-package com.ezy.databasesetting.entitiy;
+package org.youngmonkeys.message.box.entitiy;
 
 import com.tvd12.ezyfox.annotation.EzyId;
 import com.tvd12.ezyfox.database.annotation.EzyCollection;

@@ -1,6 +1,6 @@
-package com.ezy.databasesetting.repository;
+package org.youngmonkeys.message.box.repository;
 
-import com.ezy.databasesetting.entitiy.ServiceUserTokens;
+import org.youngmonkeys.message.box.entitiy.ServiceUserTokens;
 import com.tvd12.ezydata.mongodb.EzyMongoRepository;
 import com.tvd12.ezyfox.database.annotation.EzyRepository;
 

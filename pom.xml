@@ -8,24 +8,22 @@
         <version>0.0.2</version>
         <relativePath/>
     </parent>
-    <groupId>com.ezy</groupId>
-    <artifactId>database-setting</artifactId>
+    <groupId>org.youngmonkeys</groupId>
+    <artifactId>message-box</artifactId>
     <version>0.0.1</version>
-    <name>database-setting</name>
-    <description>database project for Ezy Server</description>
+    <name>message-box</name>
+    <description>Admin for MessageBox</description>
     <properties>
-        <java.version>11</java.version>
         <hikaricp.version>4.0.3</hikaricp.version>
-        <ezy.mongo.version>1.2.1</ezy.mongo.version>
+        <ezy.version>1.2.1</ezy.version>
         <ezy.autoconfig.version>1.0.2</ezy.autoconfig.version>
-        <ezy.http.server.version>0.1.9</ezy.http.server.version>
-        <ezy.http.client.version>0.1.9</ezy.http.client.version>
+        <ezy.http.version>0.2.2</ezy.http.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezydata-mongodb</artifactId>
-            <version>${ezy.mongo.version}</version>
+            <version>${ezy.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
@@ -35,12 +33,12 @@
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyhttp-server-boot</artifactId>
-            <version>${ezy.http.server.version}</version>
+            <version>${ezy.http.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyhttp-client</artifactId>
-            <version>${ezy.http.client.version}</version>
+            <version>${ezy.http.version}</version>
         </dependency>
         <dependency>
             <groupId>com.zaxxer</groupId>
