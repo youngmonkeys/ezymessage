@@ -19,6 +19,8 @@
         <ezy.autoconfig.version>1.0.2</ezy.autoconfig.version>
         <ezy.http.version>0.2.2</ezy.http.version>
         <ezy.security.version>1.2.1</ezy.security.version>
+        <style.version>3.1.2</style.version>
+        <style.tool.version>8.42</style.tool.version>
     </properties>
     <dependencies>
         <dependency>
@@ -52,12 +54,48 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.tvd12/ezyfox-security -->
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyfox-security</artifactId>
             <version>${ezy.security.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>${style.version}</version>
+            <type>maven-plugin</type>
+        </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${style.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>${style.tool.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <consoleOutput>true</consoleOutput>
+                    <violationSeverity>warning</violationSeverity>
+                    <failOnViolation>true</failOnViolation>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>verify</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
