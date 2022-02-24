@@ -18,6 +18,7 @@
         <ezy.version>1.2.1</ezy.version>
         <ezy.autoconfig.version>1.0.2</ezy.autoconfig.version>
         <ezy.http.version>0.2.2</ezy.http.version>
+        <guava-version>31.0.1-jre</guava-version>
     </properties>
     <dependencies>
         <dependency>
@@ -50,6 +51,11 @@
                     <artifactId>slf4j-api</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava-version}</version>
         </dependency>
     </dependencies>
 </project>
