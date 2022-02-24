@@ -1,6 +1,6 @@
 package org.youngmonkeys.message.box.service;
 
-import com.google.common.hash.Hashing;
+import com.tvd12.ezyfox.sercurity.EzySHA256;
 import com.tvd12.ezyhttp.server.core.annotation.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -14,8 +14,6 @@ public class TokenService {
         UUID uuid = UUID.randomUUID();
         Date date = new Date();
         String originalString = date.toString() + uuid + serviceName;
-        return Hashing.sha256()
-                .hashString(originalString, StandardCharsets.UTF_8)
-                .toString();
+        return EzySHA256.cryptUtfToLowercase(originalString);
     }
 }
