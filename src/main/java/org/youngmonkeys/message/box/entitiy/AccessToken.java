@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @EzyCollection
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccessToken extends BaseEntity{
+public class AccessToken extends BaseEntity {
     @EzyId
     private String accessToken;
     private long userId;

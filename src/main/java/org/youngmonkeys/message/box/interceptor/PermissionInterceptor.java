@@ -9,8 +9,10 @@ import com.tvd12.ezyhttp.server.core.request.RequestArguments;
 import org.youngmonkeys.message.box.annotation.UserId;
 import org.youngmonkeys.message.box.controller.HomeController;
 import org.youngmonkeys.message.box.controller.LoginController;
+import org.youngmonkeys.message.box.controller.UserProjectController;
 import org.youngmonkeys.message.box.controller.UserController;
 import org.youngmonkeys.message.box.exception.TokenNotFoundException;
+import org.youngmonkeys.message.box.request.UserProjectRequest;
 import org.youngmonkeys.message.box.request.UpdateUserRequest;
 import org.youngmonkeys.message.box.service.IAuthenticationService;
 
@@ -31,7 +33,10 @@ public class PermissionInterceptor extends EzyLoggable implements RequestInterce
                     HomeController.class.getDeclaredMethod("home", long.class),
                     LoginController.class.getDeclaredMethod("logout", String.class),
                     UserController.class.getDeclaredMethod("userUpdateGet", long.class),
-                    UserController.class.getDeclaredMethod("userSavePost", long.class, UpdateUserRequest.class)
+                    UserController.class.getDeclaredMethod("userSavePost", long.class, UpdateUserRequest.class),
+                    UserProjectController.class.getDeclaredMethod("createProject",  UserProjectRequest.class,long.class),
+                    UserProjectController.class.getDeclaredMethod("projectsByUserId",long.class,int.class,int.class),
+                    UserProjectController.class.getDeclaredMethod("getByKey",long.class,String.class)
             );
         } catch (Exception e) {
             throw new IllegalStateException(e);
